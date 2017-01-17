@@ -12,10 +12,10 @@ import io.bush.model.Product;
 @WebService(name = "TestMartCatalog", targetNamespace = "http://www.testmart.com")
 public interface ProductCatalogInterface {
 
-	@WebMethod(exclude = false)
+	@WebMethod(action = "fetch_categories", operationName = "fetchCategories")
 	List<String> getProductCategories();
 
-	@WebMethod(action = "fetch_categories", operationName = "fetchCategories")
+	@WebMethod()
 	List<String> getProduct(String category);
 
 	@WebMethod
