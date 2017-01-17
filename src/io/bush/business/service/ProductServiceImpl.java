@@ -3,6 +3,8 @@ package io.bush.business.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.bush.model.Product;
+
 public class ProductServiceImpl {
 	
 	List<String> bookList = new ArrayList<>();
@@ -60,6 +62,14 @@ public class ProductServiceImpl {
 			break;	
 		}
 		return true;
+	}
+
+	public List<Product> getProductsv2(String category) {
+		List<Product> productsList = new ArrayList<>();
+		productsList.add(new Product("bushan code book","1234",1000));
+		productsList.add(new Product("bushan code book 2 ","12343",1000));
+		
+		return productsList;
 	}
 	
 	
